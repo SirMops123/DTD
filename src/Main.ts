@@ -7,8 +7,8 @@ const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 
 const ctx  = canvas.getContext("2d")
 if (ctx == null) throw "Im dum";
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = 1600;
+canvas.height = 900;
 const rctx = new Renderobject(ctx)
 
 
