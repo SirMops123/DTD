@@ -30,13 +30,11 @@ export class PathFollower {
         return dir.normalize();
     }
     private hasReachedTarget():boolean {
-        return this._pos.distance(this.currentTarget) < 1
+        return this._pos.distance(this.currentTarget) < 6
     }
     update (dt:number){
         const dir = this.dircetionToTarget()
         this._pos.add(dir.clone().scale(this._speed * dt))
-
-
         if(this.hasReachedTarget()){
             this._pos = this.currentTarget.clone();
             this._pathIdx++;
